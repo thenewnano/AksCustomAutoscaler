@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "aks_custom_autoscaler"
+version = "0.0.1"
+authors = [
+  { name="Shwan Ciyako", email="shwan.ciyako@gmail.com" },
+]
+description = "A small service to scale up/down AKS cluster based on custom metrics, in this case the number of pods in a specfic stage, the service will taint the node to prevent new pods from being scheduled on it, until the node is an a preferred state (not native k8s state), it can also remove nodes when reaching a certain threshold"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/thenewnano/AksCustomAutoscaler"
+"Bug Tracker" = "https://github.com/thenewnano/AksCustomAutoscaler/issues"
